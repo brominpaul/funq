@@ -162,7 +162,9 @@ p1 {
 .for-home{
   height: 500px;
 }
-
+.display-align {
+  display: flex;
+}
 
 @media only screen and (min-width: 320px) and (max-width: 767.98px) {
   .w-xs-50 {
