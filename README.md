@@ -1,0 +1,2 @@
+# funq
+ Student banking Platform
