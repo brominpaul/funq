@@ -1,0 +1,792 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Funq - Student Banking Platform</title>
+    <link rel='stylesheet' href='Css/bootstrap.min.css'>
+    <link rel='stylesheet' href='Css/all.min.css'>
+    <link rel="stylesheet" href="Css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body translate="no">
+<header>
+    <nav class="navbar navbar-expand-md navbar-light bg-white shadow-sm">
+        <a class="navbar-brand" href="#"><h1><img class="nav-img" src="Assets/Images/funq-logo.png" alt="logo" style="width: 100px; height: 100px;"></h1></a>
+        <button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-lg-5 pl-lg-4 navbar-nav mr-0 mt-2 mt-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#for-banks" style="padding-right: 1.5rem; color: #000;">Banks<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#for-institution" style="padding-right: 1.5rem; color: #000;">School/College</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#for-startups" style="padding-right: 1.5rem; color: #000;">Startups</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#for-products" style="padding-right: 1.5rem; color: #000;">Products</a>
+                </li>
+                <li class="nav-item d-none d-md-block" style="padding-right: .8rem; padding-top: 0px;">
+                    <button type="button" class="btn btn-outline-orange" style="font-weight:bold;">LOG IN</button>
+                </li>
+                <li class="nav-item d-none d-md-block" style="padding-right: .8rem; padding-top: 0px;"></li>    
+                    <button id="touch" type="button" class="btn btn-get-touch">GET IN TOUCH</button>
+                </li>
+
+            </ul>
+            <!-- <ul id="request-head" class="navbar-nav mr-0 mt-2 mt-lg-0">
+                <li class="nav-item d-none d-md-block" style="padding-right: .8rem; padding-top: 5px;">
+                    <button type="button" class="btn btn-outline-orange" style="font-weight:bold;">LOG IN</button>
+                    <button id="touch" type="button" class="btn btn-get-touch">GET IN TOUCH</button>
+                </li>
+            </ul> -->
+        </div>
+        <div id="contactform">
+            <form id="contact-form" class="contact-form" action="mailto:ricky@funq.in" method="post">
+                <h3>Contact Us</h3>
+                <ul>
+                
+                    <li class="fname">
+                        <input type="text" class="input-name" name="FirstName" placeholder="ie. Joe McDoodle" spellcheck="false" min-length="2" max-length="40" required />
+                        <label for="name" >First Name</label>
+                        <span class="notification"></span>
+                        <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                        <span class="char-counter"></span>
+                    </li>
+                    <li class="lname">
+                        <input type="text" class="input-name" name="LastName" placeholder="ie. Joe McDoodle" spellcheck="false" min-length="2" max-length="40" required />
+                        <label for="name" class="fsize">Last Name</label>
+                        <span class="notification"></span>
+                        <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                        <span class="char-counter"></span>
+                    </li>
+                    <li class="phone">
+                        <input type="text" class="input-name" name="Phone" placeholder="ie. 9345..." spellcheck="false" min-length="2" max-length="10" required />
+                        <label for="name" class="fsize">Phone</label>
+                        <span class="notification"></span>
+                        <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                        <span class="char-counter"></span>
+                        </li>
+                        <li class="email">
+                        <input type="email" class="input-email" name="Email" placeholder="ie. my@email.com" spellcheck="false" min-length="2" max-length="30" required />
+                        <label for="email" class="fsize">Email</label>
+                        <span class="notification"></span>
+                        <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                        <span class="char-counter"></span>
+                        </li>
+                        <li class="cname">
+                        <input type="text" class="input-name" name="Company Name" placeholder="ie.paysack" spellcheck="false" min-length="2" max-length="40" required />
+                        <label for="name" class="fsize">Company Name</label>
+                        <span class="notification"></span>
+                        <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                        <span class="char-counter"></span>
+                    </li>
+                    <li class="city">
+                        <input type="text" class="input-name " name="City" placeholder="ie. kottayam" spellcheck="false" min-length="2" max-length="15" required />
+                        <label for="name" class="fsize">City</label>
+                        <span class="notification"></span>
+                        <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                        <span class="char-counter"></span>
+                    </li>
+                
+                
+                    <div class="form-btn">
+                    <input id="input-submit" class="btn btn-outline-yellow comment-pad" type="submit" value="Submit" id="submit" />   
+                    </div>
+
+                </ul>
+            </form>
+        </div>
+    </nav>
+</header>
+
+<div class="for-home d-flex flex-direction-column flex-direction-md-row flex-wrap flex-wrap-md-nowrap">
+    <div id="introduction" class="container-fluid-md  w-md-50 order-md-3 overflow-hidden">
+        <div id="intro-img-holder" class="col-12 row justify-content-center m-0 p-0">
+            <img id="intro-img" class="img-fluid"  style="width: 500px;" src="Assets/Images/for-home.png" alt="intro img" >
+        </div>
+    </div>
+    <div class="container-md w-md-50 d-md-flex justify-content-center align-items-center flex-column">
+        <div class="col-md-10 offset-md-1 col-xl-8 offset-xl-0 double-gutter-md-left-padding ">
+            <h4 id="business-tagline" class=" text-md-left">Funq is a Full-stack Student Banking Platform</h4>
+            <button id="" type="button" class="btn btn-outline-yellow" onclick="window.location.href = '#funq';">READ MORE</button>
+            &nbsp;&nbsp;
+            <button id="" type="button" class="btn btn-contactus" onclick="window.location.href = '#for-contact';" >CONTACT US</button>
+        </div>
+    </div>
+</div>
+
+<!-- funk -->
+<div id="funq" class="row imgcon">
+    <div class="container">
+        <h3>What is funq?</h3>
+        <h5>Simple & Secure API Banking Platform for Educational Institutions, Students & their Parents.</h> 
+    </div>
+    <br>
+    <div class="container">
+        <div class="row">
+            <div class="column col-4 img-con">
+                <img src="Assets/Images/for-student1.png" alt="Api Platform" style="width:75%">
+                <br>
+                <span class="text-center"><h5>Student Banking + Payments <h5></span>
+            </div>
+            <div class="column col-4 img-con">
+                <img src="Assets/Images/for-bank1.png" alt="Api Platform" style="width:75%">
+                <br>
+                <span class="text-center"><h5>Infrastructure + API Platform<h5></span>
+            </div>
+            <div class="column col-4 img-con">
+            <img src="Assets/ImagEs/for-institution1.png" alt="Digital" style="width:75%">
+            <br>
+            <span class="text-center"><h5>Digital Campus<h5></span>
+            </div>
+        </div>
+    </div>
+</div>   
+
+<!-- funk for banks -->
+<div id="for-banks" class="container imgcon">
+    <br><br>
+    <h3 class="text-center">Funq for Banks</h3>
+    <div style="width: 150px;" class="container sub-head"></div>
+        <br>
+    <div class="row">
+        <div class="column col-6 img-con">
+            <img src="Assets/Images/for-bank1.png" alt="Api Platform" style="width:75%">
+            <br>
+            <span class="text-center"><h5> Infrastructure + API Platform <h5></span>
+        </div>
+        <div class="column col-6 img-con">
+          <img src="Assets/Images/for-bank2.png" alt="Forest" style="width:75%">
+          <br>
+          <span class="text-center"><h5> Solutions for Institutions, Students & their Parents <h5></span>
+        </div>
+    </div>
+</div>
+
+<!-- Funq for Parents -->
+<div class="container imgcon">
+    <br><br>
+    <h3 class="text-center">Funq for Parents</h3>
+    <div style="width: 150px;" class="container sub-head"></div>
+    <br>
+    <div class="row">
+        <div class="column col-6 img-con">
+            <img src="Assets/Images/for-parent1.png" alt="Api Platform" style="width:75%">
+            <br>
+            <span class="text-center"><h5> Give your kid their first bank account <h5></span>
+        </div>
+        <div class="column col-6 img-con">
+          <img src="Assets/Images/for-parent2.png" alt="Forest" style="width:75%">
+          <br>
+          <span class="text-center"><h5> Control & flexibility in your hand <h5></span>
+        </div>
+    </div>
+</div>
+
+<!-- Funq for Students -->
+<div class="container imgcon ">
+    <br><br>
+    <h3 class="text-center">Funq for Students</h3>
+    <div style="width: 150px;" class="container sub-head"></div>
+    <br>
+    <div class="row">
+        <div class="column col-6 img-con">
+            <img src="Assets/Images/for-student1.png" alt="Api Platform" style="width:75%">
+            <br>
+            <span class="text-center"><h5> Neobanking / Digital Payments <h5></span>
+        </div>
+        <div class="column col-6 img-con">
+          <img src="Assets/Images/for-student2.png" alt="Forest" style="width:75%">
+          <br>
+          <span class="text-center"><h5> Single place to earn, spend, save, & invest <h5></span>
+        </div>
+    </div>
+</div>
+
+<!-- Funq for Educational Institutions -->
+<div id="for-institution" class="container imgcon ">
+    <br><br>
+    <h3 class="text-center">Funq for Educational Institutions</h3>
+    <div style="width: 150px;" class="container sub-head"></div>
+    <br>
+    <div class="row">
+        <div class="column col-6 img-con">
+            <img src="Assets/Images/for-institution1.png" alt="Api Platform" style="width:75%">
+            <br>
+            <span class="text-center"><h5>Digital Campus <h5></span>
+        </div>
+        <div class="column col-6 img-con">
+          <img src="Assets/Images/for-institution2.png" alt="Forest" style="width:75%">
+          <br>
+          <span class="text-center"><h5> Closed-loop Wallet / Cards <h5></span>
+        </div>
+    </div>
+</div>
+
+<!-- Funq for School ERP -->
+<div class="container imgcon ">
+    <br><br>
+    <h3 class="text-center">Funq for School ERP</h3>
+    <div style="width: 150px;" class="container sub-head"></div>
+    <br>
+    <div class="row">
+        <div class="column col-6 img-con">
+            <img src="Assets/Images/for-erp1.png" alt="Api Platform" style="width:75%">
+            <br>
+            <span class="text-center"><h5>Payment solutions for students / parents / institutions<h5></span>
+        </div>
+        <div class="column col-6 img-con">
+          <img src="Assets/Images/for-erp2.png" alt="Forest" style="width:75%">
+          <br>
+          <span class="text-center"><h5>Bank partnerships / APIs to integrate<h5></span>
+        </div>
+    </div>
+</div>
+
+<!-- funq for startups -->
+<div id="for-startups" class="container imgcon">
+    <br><br>
+    <h3 class="text-center">Funq for Startups</h3>
+    <div style="width: 150px;" class="container sub-head"></div>
+    <br>
+    <span class="text-center"><h4>End-to-end support for Fintechs to build and launch best in class financial products</h4></span>
+    <br><br>
+    <div class="row row-solution school-erp">
+        <div class="col-md-4 text-center">
+            <img src="Assets/Icons/consulting.png" class="img-fluid img-solution ico">
+            <h5 style="padding-top:10px;">Consulting</h5>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="Assets/Icons/bank-integration.png" class="img-fluid img-solution ico">
+            <h5 style="padding-top:10px;">Bank Integrations</h5>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="Assets/Icons/partnerships.png" class="img-fluid img-solution ico">
+            <h5 style="padding-top:10px;">BFSI/Vendor/Business Partnerships</h5>
+        </div>
+    </div>
+    <div class="row row-solution">
+        <div class="col-md-4 text-center">
+            <img src="Assets/Icons/paysack-apps.png" class="img-fluid img-solution ico">
+            <h5 style="padding-top:10px;">Mobile/Web Apps</h5>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="Assets/Icons/cloud.png" class="img-fluid img-solution ico">
+            <h5 style="padding-top:10px;">Infrastructure</h5>
+        </div>
+        <div class="col-md-4 text-center">
+            <img src="Assets/Icons/strategy.png" class="img-fluid img-solution ico">
+            <h5 style="padding-top:10px;" >Strategy</h5>
+        </div>
+    </div>
+</div>
+
+ <!-- funq for products -->
+<div id="for-products" class="container imgcon">
+    <br><br>
+    <h3 class="text-center">For Digital Campus: Contactless Payment Solution</h3>
+    <div style="width: 150px;" class="container sub-head"></div>
+    <br><br>
+    <div class="row">
+        <div class="column col-3 img-con">
+            <h4>For Banks</h4>
+            <div style="width: 150px;" class="container sub-head"></div>
+            <br>
+            <img src="Assets/Images/for-products1.png" alt="Api Platform" style="width:75%">
+            <br><br>
+            <span class="text-center"><h5> Infrastructure & API Platform <h5></span>
+        </div>
+
+        <div class="column col-3 img-con">
+            <h4>For Students</h4>
+            <div style="width: 150px;" class="container sub-head"></div>
+            <br>
+            <img src="Assets/Images/for-products2.png" alt="Forest" style="width:75%">
+            <br><br>
+            <span class="text-center"><h5> Closed-loop</h5><h5>  Wallet + NFC Card </h5></span>
+        </div>
+
+        <div class="column col-3 img-con">
+            <h4>For Merchants</h4>
+            <div style="width: 150px;" class="container sub-head"></div>
+            <br>
+            <img src="Assets/Images/for-products3.png" alt="Forest" style="width:75%">
+            <br><br>
+            <span class="text-center"><h5>Digital Contactless</h5><h5>Digital Payments</h5></span>
+        </div>
+
+        <div class="column col-3 img-con">
+            <h4>For Admin</h4>
+            <div style="width: 150px;" class="container sub-head"></div>
+            <br>
+            <img src="Assets/Images/for-products4.png" alt="Forest" style="width:75%">
+            <br><br>
+            <span class="text-center"><h5>Dashboard for</h5><h5>Bird's eye view</h5></span>
+        </div>
+    </div>
+                
+</div>
+
+ <!-- funq for neobank -->
+<div id="for-products" class="container imgcon">
+    <br><br>
+    <h3 class="text-center">Funq Bank Account: NeoBanks For Students</h3>
+    <div style="width: 150px;" class="container sub-head"></div>
+    <br>
+    <div class="row">
+        <div class="column col-4 img-con">
+            <h4>For Banks/Fintechs</h4>
+            <div style="width: 150px;" class="container sub-head"></div>
+            <br>
+            <img src="Assets/Images/Neo-For-Stud1.png" alt="Api Platform" style="width:75%">
+            <br><br>
+            <span class="text-center"><h5> Infrastructure & API Platform </h5><h5>and/or White-labelled Solution</h5></span>
+        </div>              
+
+        <div class="column col-4 img-con">
+            <h4>For Students</h4>
+            <div style="width: 150px;" class="container sub-head"></div>
+            <br>
+            <img src="Assets/Images/Neo-for-stud2.png" alt="Forest" style="width:75%">
+            <br><br>
+            <span class="text-center"><h5> Open-loop</h5><h5>  Wallet + Card </h5></span>
+        </div>
+
+        <div class="column col-4 img-con">
+            <h4>For Parents</h4>
+            <div style="width: 150px;" class="container sub-head"></div>
+            <br>
+            <img src="Assets/Images/Neo-for-stud3.png" alt="Forest" style="width:75%">
+            <br><br>
+            <span class="text-center"><h5>Parental Control</h5><h5>Programmable Account + Card</h5></span>
+        </div>
+    </div>
+        
+</div>
+
+                    
+    
+
+    <div id="for-contact" class="row">
+        <div class="contact col-12">
+            <P class= "bold-align">Do you have an idea around student banking?</P>   
+        </div>
+    </div>
+    <div class ="holder">
+      <div class="row">
+          <div class="contact col-12">
+              <a id="test" href="#"><button type="submit" class="outline black-yellow">Contact Us</button><a>
+          </div>
+      </div>
+    </div>
+
+
+<!-- contact-form -->
+    <div id="contactform">
+      <form id="contact-form" class="contact-form" action="mailto:ricky@funq.in" method="post">
+        <h3>Contact Us</h3>
+        <ul>
+      
+            <li class="fname">
+                <input type="text" class="input-name" name="FirstName" placeholder="ie. Joe McDoodle" spellcheck="false" min-length="2" max-length="40" required />
+                <label for="name" >First Name</label>
+                <span class="notification"></span>
+                <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                <span class="char-counter"></span>
+            </li>
+            <li class="lname">
+                <input type="text" class="input-name" name="LastName" placeholder="ie. Joe McDoodle" spellcheck="false" min-length="2" max-length="40" required />
+                <label for="name" class="fsize">Last Name</label>
+                <span class="notification"></span>
+                <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                <span class="char-counter"></span>
+            </li>
+            <li class="phone">
+                <input type="text" class="input-name" name="Phone" placeholder="ie. 9345..." spellcheck="false" min-length="2" max-length="10" required />
+                <label for="name" class="fsize">Phone</label>
+                <span class="notification"></span>
+                <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                <span class="char-counter"></span>
+              </li>
+              <li class="email">
+                <input type="email" class="input-email" name="Email" placeholder="ie. my@email.com" spellcheck="false" min-length="2" max-length="30" required />
+                <label for="email" class="fsize">Email</label>
+                <span class="notification"></span>
+                <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                <span class="char-counter"></span>
+              </li>
+              <li class="cname">
+                <input type="text" class="input-name" name="Company Name" placeholder="ie.paysack" spellcheck="false" min-length="2" max-length="40" required />
+                <label for="name" class="fsize">Company Name</label>
+                <span class="notification"></span>
+                <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                <span class="char-counter"></span>
+            </li>
+            <li class="city">
+                <input type="text" class="input-name " name="City" placeholder="ie. kottayam" spellcheck="false" min-length="2" max-length="15" required />
+                <label for="name" class="fsize">City</label>
+                <span class="notification"></span>
+                <span class="required"><strong><small><em> (required)</em></small></strong></span>
+                <span class="char-counter"></span>
+            </li>
+      <!-- </ul> -->
+      
+      <div class="form-btn">
+      <input id="input-submit" class="btn btn-outline-yellow comment-pad" type="submit" value="Submit" id="submit" />
+      <!-- <input id="input-submit" class="input-submit btn btn-outline-yellow" type="submit" value="Submit" id="submit" /> -->
+
+      </div>
+    </ul>
+      </form>
+      </div>
+  
+
+      <script id="rendered-js">
+        var form = $("#contact-form");
+        
+        //event listeners
+        form.addEventListener('blur', validateInput, true);
+        form.addEventListener('focus', readyInput, true);
+        form.addEventListener('focus', formCharCounter, true);
+        form.addEventListener('keyup', formCharCounter, true);
+        form.addEventListener('keydown', formCharCounter, true);
+        
+        //error messages
+        var errorMsg = {
+            invalid: 'Invalid input.',
+            required: 'This field is required.',
+            url: 'Invalid url.',
+            email: 'E-mail is invalid.',
+            tooShort: 'Input is too short.',
+            tooLong: 'Input is too long.'
+        };
+        
+        //regex stuff
+        var pattern = {
+            name: /[A-Za-z -']$/,
+            email: /^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$/,
+            url: /^(https?:\/\/)?([\w\d\-_]+\.+[A-Za-z]{2,})+\/?/
+        };
+        
+        //a few utitlies
+        var input = {
+            say: function (el, msg, visible) {
+                var field = $(el);
+        
+                field.textContent = msg;
+                field.style.opacity = visible;
+            },
+            show: function (el) {
+                return el.style.opacity = '1';
+            },
+            hide: function (el) {
+                return el.style.opacity = '0';
+            }
+        };
+        
+        //validation 
+        function validateInput(e) {
+            var commentMin = e.target.getAttribute('min-length');
+            var commentMax = e.target.getAttribute('max-length');
+            var applyValid = 'text-indent: 0; border-bottom: 3px solid rgba(0, 163, 136, 0.95); color: rgba(0, 163, 136, 0.95);';
+            var applyError = 'text-indent: 0; border-bottom: 3px solid rgba(242, 48, 65, 0.95); color: rgba(242, 48, 65, 0.95);';
+        
+            //hide char counter
+            input.hide($('.' + e.target.parentNode.className + ' .char-counter'));
+        
+            //Align labels
+            if (e.target.tagName.toLowerCase() === 'input') {
+                ($('.' + e.target.parentNode.className + ' label')).style.marginTop = '-90px';
+            } else if (e.target.tagName.toLowerCase() === 'textarea') {
+                ($('.' + e.target.parentNode.className + ' label')).style.marginTop = '-105px';
+            }
+        
+            if (e.target.tagName.toLowerCase() === 'input' && e.target.type !== 'submit') {
+                //test input fields, probably better targeting input classes/id
+                //if the form happens to have multiple fields of the same type
+                if ((e.target.type) === 'text') {
+                    if (pattern.name.test(e.target.value) === true && e.target.value !== '') {
+                        input.say('.' + e.target.parentNode.className + ' .notification', '', 0);
+                        e.target.style.cssText = applyValid;
+                        return true;
+                    } else if (pattern.name.test(e.target.value) === false && e.target.value !== '') {
+                        input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.invalid, 1);
+                        e.target.style.cssText = applyError;
+                        return false;
+                    }
+                } else if ((e.target.type) === 'email') {
+                    if (pattern.email.test(e.target.value) === true && e.target.value !== '') {
+                        input.say('.' + e.target.parentNode.className + ' .notification', '', 0);
+                        e.target.style.cssText = applyValid;
+                        return true;
+                    } else if (pattern.email.test(e.target.value) === false && e.target.value !== '') {
+                        input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.email, 1);
+                        e.target.style.cssText = applyError;
+                        return false;
+                    }
+                } else if ((e.target.type) === 'url' && e.target.value !== '') {
+                    if (pattern.url.test(e.target.value) && e.target.value !== '') {
+                        input.say('.' + e.target.parentNode.className + ' .notification', '', 0);
+                        e.target.style.cssText = applyValid;
+                        return true;
+                    } else if (!pattern.url.test(e.target.value)) {
+                        input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.url, 1);
+                        e.target.style.cssText = applyError;
+                        return false;
+                    }
+                }
+            } else if (e.target.tagName.toLowerCase() === 'textarea') {
+                if (e.target.value !== '' && (e.target.value.length >= commentMin && e.target.value.length <= commentMax)) {
+                    input.say('.' + e.target.parentNode.className + ' .notification', '', 0);
+                    e.target.style.cssText = applyValid;
+                    return true;
+                } else if (e.target.value !== '' && e.target.value.length < commentMin) {
+                    input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.tooShort, 1);
+                    e.target.style.cssText = applyError;
+                    return false;
+                } else if (e.target.value !== '' && e.target.value.length > commentMax) {
+                    input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.tooLong, 1);
+                    e.target.style.cssText = applyError;
+                    return false;
+                }
+            }
+        
+            //if fields are empty except url which is optional
+            if (e.target.value === '' && e.target.type !== 'submit') {
+                if (e.target.type === 'url') {
+                    input.hide($('.' + e.target.parentNode.className + ' .notification'));
+                    e.target.style.cssText = applyValid;
+                    e.target.placeholder = 'n/a';
+                    return true;
+                } else {
+                    input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.required, 1);
+                    e.target.style.cssText = applyError;
+                    return false;
+                }
+            }
+        }
+        
+        // hide notification and reveal char count
+        function readyInput(e) {
+            if ((e.target.tagName.toLowerCase() === 'input') || (e.target.tagName.toLowerCase() === 'textarea')) {
+                input.hide($('.' + e.target.parentNode.className + ' .notification'));
+                input.show($('.' + e.target.parentNode.className + ' .char-counter'));
+                e.target.style.cssText = 'text-indent: 0; border-bottom: 3px solid  rgba(0, 161, 217, 1); color: #777;'
+            }
+        }
+        
+        //apply char count
+        function formCharCounter(e) {
+            if ((e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') && e.target.type !== 'submit') {
+                textCounter($('.' + e.target.className), $('.' + e.target.parentNode.className + ' .char-counter'));
+            }
+        }
+        
+        //char count
+        function textCounter(field, counter) {
+            var maxLength = field.getAttribute('max-length');
+        
+            if (field.value.length > maxLength) {
+                field.value = field.value.substring(0, maxLength);
+            } else {
+                counter.textContent = maxLength - field.value.length + "/" + maxLength + ' chars';
+            }
+        }
+        
+        function $(q) {
+            return document.querySelector(q);
+        }
+        
+        form = $("#test");
+        
+        //event listeners
+        form.addEventListener('click', testfunc, true);
+          var r = document.getElementById("contactform");
+        r.style.display = "none";
+        function testfunc() {
+          if (r.style.display == "none") {
+            r.style.display = "block";
+          } else {
+            r.style.display = "none";
+          }  
+        }
+            </script>
+
+
+<!-- get in touch -->
+<script id="rendered-js">
+    var form = $("#contact-form");
+    
+    //event listeners
+    form.addEventListener('blur', validateInput, true);
+    form.addEventListener('focus', readyInput, true);
+    form.addEventListener('focus', formCharCounter, true);
+    form.addEventListener('keyup', formCharCounter, true);
+    form.addEventListener('keydown', formCharCounter, true);
+    
+    //error messages
+    var errorMsg = {
+        invalid: 'Invalid input.',
+        required: 'This field is required.',
+        url: 'Invalid url.',
+        email: 'E-mail is invalid.',
+        tooShort: 'Input is too short.',
+        tooLong: 'Input is too long.'
+    };
+    
+    //regex stuff
+    var pattern = {
+        name: /[A-Za-z -']$/,
+        email: /^(([-\w\d]+)(\.[-\w\d]+)*@([-\w\d]+)(\.[-\w\d]+)*(\.([a-zA-Z]{2,5}|[\d]{1,3})){1,2})$/,
+        url: /^(https?:\/\/)?([\w\d\-_]+\.+[A-Za-z]{2,})+\/?/
+    };
+    
+    //a few utitlies
+    var input = {
+        say: function (el, msg, visible) {
+            var field = $(el);
+    
+            field.textContent = msg;
+            field.style.opacity = visible;
+        },
+        show: function (el) {
+            return el.style.opacity = '1';
+        },
+        hide: function (el) {
+            return el.style.opacity = '0';
+        }
+    };
+    
+    //validation 
+    function validateInput(e) {
+        var commentMin = e.target.getAttribute('min-length');
+        var commentMax = e.target.getAttribute('max-length');
+        var applyValid = 'text-indent: 0; border-bottom: 3px solid rgba(0, 163, 136, 0.95); color: rgba(0, 163, 136, 0.95);';
+        var applyError = 'text-indent: 0; border-bottom: 3px solid rgba(242, 48, 65, 0.95); color: rgba(242, 48, 65, 0.95);';
+    
+        //hide char counter
+        input.hide($('.' + e.target.parentNode.className + ' .char-counter'));
+    
+        //Align labels
+        if (e.target.tagName.toLowerCase() === 'input') {
+            ($('.' + e.target.parentNode.className + ' label')).style.marginTop = '-90px';
+        } else if (e.target.tagName.toLowerCase() === 'textarea') {
+            ($('.' + e.target.parentNode.className + ' label')).style.marginTop = '-105px';
+        }
+    
+        if (e.target.tagName.toLowerCase() === 'input' && e.target.type !== 'submit') {
+            //touch input fields, probably better targeting input classes/id
+            //if the form happens to have multiple fields of the same type
+            if ((e.target.type) === 'text') {
+                if (pattern.name.touch(e.target.value) === true && e.target.value !== '') {
+                    input.say('.' + e.target.parentNode.className + ' .notification', '', 0);
+                    e.target.style.cssText = applyValid;
+                    return true;
+                } else if (pattern.name.touch(e.target.value) === false && e.target.value !== '') {
+                    input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.invalid, 1);
+                    e.target.style.cssText = applyError;
+                    return false;
+                }
+            } else if ((e.target.type) === 'email') {
+                if (pattern.email.touch(e.target.value) === true && e.target.value !== '') {
+                    input.say('.' + e.target.parentNode.className + ' .notification', '', 0);
+                    e.target.style.cssText = applyValid;
+                    return true;
+                } else if (pattern.email.touch(e.target.value) === false && e.target.value !== '') {
+                    input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.email, 1);
+                    e.target.style.cssText = applyError;
+                    return false;
+                }
+            } else if ((e.target.type) === 'url' && e.target.value !== '') {
+                if (pattern.url.touch(e.target.value) && e.target.value !== '') {
+                    input.say('.' + e.target.parentNode.className + ' .notification', '', 0);
+                    e.target.style.cssText = applyValid;
+                    return true;
+                } else if (!pattern.url.touch(e.target.value)) {
+                    input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.url, 1);
+                    e.target.style.cssText = applyError;
+                    return false;
+                }
+            }
+        } else if (e.target.tagName.toLowerCase() === 'textarea') {
+            if (e.target.value !== '' && (e.target.value.length >= commentMin && e.target.value.length <= commentMax)) {
+                input.say('.' + e.target.parentNode.className + ' .notification', '', 0);
+                e.target.style.cssText = applyValid;
+                return true;
+            } else if (e.target.value !== '' && e.target.value.length < commentMin) {
+                input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.tooShort, 1);
+                e.target.style.cssText = applyError;
+                return false;
+            } else if (e.target.value !== '' && e.target.value.length > commentMax) {
+                input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.tooLong, 1);
+                e.target.style.cssText = applyError;
+                return false;
+            }
+        }
+    
+        //if fields are empty except url which is optional
+        if (e.target.value === '' && e.target.type !== 'submit') {
+            if (e.target.type === 'url') {
+                input.hide($('.' + e.target.parentNode.className + ' .notification'));
+                e.target.style.cssText = applyValid;
+                e.target.placeholder = 'n/a';
+                return true;
+            } else {
+                input.say('.' + e.target.parentNode.className + ' .notification', errorMsg.required, 1);
+                e.target.style.cssText = applyError;
+                return false;
+            }
+        }
+    }
+    
+    // hide notification and reveal char count
+    function readyInput(e) {
+        if ((e.target.tagName.toLowerCase() === 'input') || (e.target.tagName.toLowerCase() === 'textarea')) {
+            input.hide($('.' + e.target.parentNode.className + ' .notification'));
+            input.show($('.' + e.target.parentNode.className + ' .char-counter'));
+            e.target.style.cssText = 'text-indent: 0; border-bottom: 3px solid  rgba(0, 161, 217, 1); color: #777;'
+        }
+    }
+    
+    //apply char count
+    function formCharCounter(e) {
+        if ((e.target.tagName.toLowerCase() === 'input' || e.target.tagName.toLowerCase() === 'textarea') && e.target.type !== 'submit') {
+            textCounter($('.' + e.target.className), $('.' + e.target.parentNode.className + ' .char-counter'));
+        }
+    }
+    
+    //char count
+    function textCounter(field, counter) {
+        var maxLength = field.getAttribute('max-length');
+    
+        if (field.value.length > maxLength) {
+            field.value = field.value.substring(0, maxLength);
+        } else {
+            counter.textContent = maxLength - field.value.length + "/" + maxLength + ' chars';
+        }
+    }
+    
+    function $(q) {
+        return document.querySelector(q);
+    }
+    
+    form = $("#touch");
+    
+    //event listeners
+    form.addEventListener('click', touchfunc, true);
+      var r = document.getElementById("contactform");
+    r.style.display = "none";
+    function touchfunc() {
+      if (r.style.display == "none") {
+        r.style.display = "block";
+      } else {
+        r.style.display = "none";
+      }  
+    }
+        </script>
+</body>
+</html>
