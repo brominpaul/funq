@@ -12,8 +12,8 @@ h3 {
 
 }
 
-.abc {
-  padding-left: 15px;
+#form-close {
+  padding-top: 20px;
 }
 
 p {
@@ -847,4 +847,19 @@ input[type=submit] {
         opacity: 0;
     }
 }
+/* The Close Button */
+.close {
+  color: #000;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 

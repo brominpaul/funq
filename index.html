@@ -41,7 +41,16 @@
         </div>
         <div id="contactform">
             <form id="contact-form" class="contact-form" action="mailto:ricky@funq.in" method="post">
-                <h3>Contact Us</h3>
+                <div class="rows">
+                    <div class="col-6" style="padding-left: 0px !important">
+                       <h3>Contact </h3> 
+                    </div>
+                    <div class="col-6" style="padding-right: 0px !important">
+                        <span id="form-close" class="close" data-dismiss="modal">&times;</span>
+                    </div>
+                </div>
+
+                
                 <ul>
                 
                     <li class="fname">
@@ -391,7 +400,15 @@
 <!-- contact-form -->
     <div id="contactform">
       <form id="contact-form" class="contact-form" action="mailto:ricky@funq.in" method="post">
-        <h3>Contact Us</h3>
+          <div class="rows">
+              <div class="c" style="padding-left: 0px !important;">
+                 <h3>Contact </h3> 
+              </div>
+              <div class="col-6">
+                <button type="button" class="close" data-dismiss="modal">&times;</button>
+              </div>
+          </div>
+        
         <ul>
       
             <li class="fname">
@@ -618,6 +635,15 @@
           }  
         }
             </script>
+
+
+    <script>
+    var modal = document.getElementById("contactform");
+    var span = document.getElementsByClassName("close")[0];
+    span.onclick = function() {
+      modal.style.display = "none";
+    } 
+    </script>
 
 
 <!-- get in touch -->
