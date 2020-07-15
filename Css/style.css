@@ -91,16 +91,16 @@ p1 {
 
   nav {
     z-index: 3000 !important;
-    padding: 0 6rem 0 6rem !important;
+    /* padding: 0 6rem 0 6rem !important; */
     width: 100%;
-    padding-left: 14% !important;
+    padding-left: 8% !important;
     padding-top: 0.5% !important;
     padding-bottom: 0.5% !important;
   }
 
   .navbar-expand-md .navbar-collapse {
     align-items: center;
-    padding-right: 14%;
+    /* padding-right: 14%; */
   }
 }
 @media only screen and (min-width: 1200px) {
@@ -124,7 +124,7 @@ p1 {
   }
 
   .navbar-expand-md .navbar-collapse {
-    padding-left: 22% !important;
+    padding-left: 20% !important;
   }
 }
 .nav-link {
