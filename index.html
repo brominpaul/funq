@@ -29,9 +29,9 @@
             <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-lg-5 pl-lg-4 navbar-nav mr-0 mt-2 mt-lg-0">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0 ml-lg-5 pl-lg-3 navbar-nav mr-0 mt-2 mt-lg-0">
                 <li class="nav-item">
-                    <a class="nav-link" href="#for-banks" style="padding-right: 1.5rem; color: #000;">Banks<span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#for-banks"  style="padding-right: 1.5rem; color: #000;">Banks<span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#for-institution" style="padding-right: 1.5rem; color: #000;">School/College</a>
@@ -41,6 +41,9 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#for-products" style="padding-right: 1.5rem; color: #000;">Products</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="http://docs.funq.in/" target="_blank" style="padding-right: 1.5rem; color: #000;">API Docs</a>
                 </li>
                 <li class="nav-item d-none d-md-block" style="padding-right: .8rem; padding-top: 0px;">
                     <button type="button" class="btn btn-outline-orange" style="font-weight:bold;">LOG IN</button>
@@ -52,8 +55,8 @@
             </ul>
         </div>
         <div id="contactform">
-            <form id="contact-form" class="contact-form" action="mailto:ricky@paysack.com" method="post">
-                <div class="rows">
+            <form id="contact-form"class="contact-form" action="https://docs.google.com/forms/u/0/d/e/1FAIpQLSeI4906NBQeWHS29BI3Mm2gY59n9UAKn1BaydiU2TBUgGq0MA/formResponse" method="POST">
+                <div class="contact-rows">
                     <div class="col-6" style="padding-left: 0px !important">
                        <h3>Contact </h3> 
                     </div>
@@ -66,42 +69,42 @@
                 <ul>
                 
                     <li class="fname">
-                        <input type="text" class="input-name" name="FirstName" placeholder="Saurabh" spellcheck="false" min-length="2" max-length="40" required />
+                        <input type="text" class="input-name" name="entry.532204740" placeholder="Saurabh" spellcheck="false" min-length="2" max-length="40" required />
                         <label for="name" >First Name</label>
                         <span class="notification"></span>
                         <span class="required"><strong><small><em> (required)</em></small></strong></span>
                         <span class="char-counter"></span>
                     </li>
                     <li class="lname">
-                        <input type="text" class="input-name" name="LastName" placeholder="Kumar" spellcheck="false" min-length="2" max-length="40" required />
+                        <input type="text" class="input-name" name="entry.1368060602" placeholder="Kumar" spellcheck="false" min-length="2" max-length="40" required />
                         <label for="name" class="fsize">Last Name</label>
                         <span class="notification"></span>
                         <span class="required"><strong><small><em> (required)</em></small></strong></span>
                         <span class="char-counter"></span>
                     </li>
                     <li class="phone">
-                        <input type="tel" class="input-name" name="Phone" placeholder="9991102200" spellcheck="false" min-length="2" max-length="10" pattern="[0-9]{10}" required />
+                        <input type="tel" class="input-name" name="entry.1065876966" placeholder="9991102200" spellcheck="false" min-length="2" max-length="10" pattern="[0-9]{10}" required />
                         <label for="name" class="fsize">Phone</label>
                         <span class="notification"></span>
                         <span class="required"><strong><small><em> (required)</em></small></strong></span>
                         <span class="char-counter"></span>
                         </li>
                         <li class="email">
-                        <input type="email" class="input-email" name="Email" placeholder="my@email.com" spellcheck="false" min-length="2" max-length="30" required />
+                        <input type="email" class="input-email" name="entry.743058456" placeholder="my@email.com" spellcheck="false" min-length="2" max-length="30" required />
                         <label for="email" class="fsize">Email</label>
                         <span class="notification"></span>
                         <span class="required"><strong><small><em> (required)</em></small></strong></span>
                         <span class="char-counter"></span>
                         </li>
                         <li class="cname">
-                        <input type="text" class="input-name" name="Company Name" placeholder="ABC Limited" spellcheck="false" min-length="2" max-length="40" required />
-                        <label for="name" class="fsize">Company Name</label>
+                        <input type="text" class="input-name" href="#company" name="entry.1116483917" placeholder="ABC Limited" spellcheck="false" min-length="2" max-length="40" required />
+                        <label for="name" id="company" class="fsize">Company Name</label>
                         <span class="notification"></span>
                         <span class="required"><strong><small><em> (required)</em></small></strong></span>
                         <span class="char-counter"></span>
                     </li>
                     <li class="city">
-                        <input type="text" class="input-name " name="City" placeholder="Bangalore" spellcheck="false" min-length="2" max-length="15" required />
+                        <input type="text" class="input-name " name="entry.1490839859" placeholder="Bangalore" spellcheck="false" min-length="2" max-length="15" required />
                         <label for="name" class="fsize">City</label>
                         <span class="notification"></span>
                         <span class="required"><strong><small><em> (required)</em></small></strong></span>
@@ -110,11 +113,12 @@
                 
                 
                     <div class="form-btn">
-                    <input id="input-submit" class="btn btn-outline-yellow comment-pad" type="submit" value="Submit" id="submit" />   
+                    <input id="submit" class="btn btn-outline-yellow comment-pad" type="submit" value="Submit" />   
                     </div>
 
                 </ul>
             </form>
+            <h3 id="success-msg" style="text-align: center !important; margin-top:190px !important; display:none; color:#fff"> Your Request has been posted to Google Spreadsheet</h3>
         </div>
     </nav>
 </header>
