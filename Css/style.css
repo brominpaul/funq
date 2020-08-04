@@ -120,6 +120,7 @@ p1 {
 
   .navbar-expand-md .navbar-collapse {
     padding-left: 20% !important;
+    align-items: right;
   }
 }
 .nav-link {
@@ -138,6 +139,7 @@ p1 {
 .pl-lg-4,
 .px-lg-4 {
   padding-left: 7.5rem !important;
+  margin-right: 0em !important;
 }
 
 @media screen and (device-width: 360px) and (device-height: 640px) and (-webkit-device-pixel-ratio: 3) and (orientation: portrait) {
@@ -200,12 +202,6 @@ p1 {
     background-position: 8% 112%;
   }
 
-  /* #intro-img-holder {
-    top: -13% !important;
-    left: 20% !important;
-    height: 100% !important;
-  } */
-
   #intro-img {
     height: 110% !important;
   }
@@ -263,6 +259,10 @@ p1 {
 }
 .img-con {
   text-align: center;
+}
+
+h4.bold {
+  font-weight: bold;
 }
 
 /* funq */
@@ -348,6 +348,13 @@ p1 {
 }
 
 @media only screen and (min-width: 320px) and (max-width: 767.98px) {
+  .custom-container {
+    width: 50%;
+    height: 100%;
+    margin: 0;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
   #articles {
     background-color: #fafafa !important;
   }
@@ -408,10 +415,6 @@ p1 {
     margin-right: -1% !important;
   }
 }
-h5:hover,
-h5:active {
-  /* text-shadow: 1px 1px .25px #808080; */
-}
 
 .author-name {
   font-size: 14px !important;
@@ -425,14 +428,19 @@ h5:active {
   max-height: 65px;
 }
 .contact {
-  width: 200px;
-  height: 200px;
-  background-color: #fff200;
   margin: 0;
   padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+.custom-contact-container {
+  width: 100%;
+  height: 100%;
+  background-color: #fff200;
+  margin: 0;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 .bold-align {
   stroke: rgb(0, 0, 0);
@@ -483,6 +491,20 @@ button {
   background: #000;
 }
 
+.btn-bg-white {
+  position: relative;
+  z-index: 3;
+  background-color: #ffffff;
+  color: #000000;
+  font-size: 14px;
+  border-color: #ffffff;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 10px 40px;
+  text-transform: uppercase;
+  transition: all 0.2s linear;
+}
+
 /* Three image containers (use 25% for four, and 50% for two, etc) */
 .column {
   float: left;
@@ -504,7 +526,7 @@ button {
 }
 @media only screen and (min-width: 1200px) and (max-width: 1549.98px) {
   #business-tagline {
-    font-size: 37px !important;
+    font-size: 35px !important;
   }
 }
 @media only screen and (min-width: 1550px) {
@@ -837,4 +859,13 @@ input[type="submit"] {
   color: red;
   text-decoration: none;
   cursor: pointer;
+}
+p2 {
+  font-size: 20px;
+}
+p1 {
+  font-size: ;
+}
+.a-footer {
+  text-decoration: none;
 }

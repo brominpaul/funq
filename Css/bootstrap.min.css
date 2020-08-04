@@ -176,6 +176,7 @@ a {
   color: #000;
   text-decoration: none;
   background-color: transparent;
+  cursor: pointer;
 }
 
 a:hover {
@@ -665,6 +666,14 @@ pre code {
   margin-left: -15px;
 }
 .rows {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.contact-rows {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
